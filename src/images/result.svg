@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs><style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#FFC106;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:22.9256}
+    .fil1 {fill:none}
+    .fil0 {fill:#FFC106}
+   ]]>
+  </style></defs><circle class="fil0" transform="matrix(.54312 .14553 -.14553 .54312 32 31.999)" r="22.97"/><path class="fil1 str0" d="m32 12.4v2m-9.8 0.63c0.76 1.32 1 1.73 1 1.73m-8.17 5.44c1.32 0.76 1.73 1 1.73 1m-4.36 8.8h2m0.63 9.8c1.32-0.76 1.73-1 1.73-1m5.44 8.17c0.76-1.32 1-1.73 1-1.73m8.8 4.36v-2m9.8-0.63c-0.76-1.32-1-1.73-1-1.73m8.17-5.44c-1.32-0.76-1.73-1-1.73-1m4.36-8.8h-2m-0.63-9.8c-1.32 0.76-1.73 1-1.73 1m-5.44-8.17c-0.76 1.32-1 1.73-1 1.73"/></svg>
