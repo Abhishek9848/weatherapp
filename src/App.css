@@ -24,7 +24,7 @@
   color: white;
 }
 
-.loader{
+.loader {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,4 +35,13 @@
   right: 0;
   background: #ffffff45;
   z-index: 9999;
+}
+
+.dateTime {
+  display: flex;
+  position: absolute;
+  width: 974px;
+  margin: 0 auto;
+  top: 30px;
+  justify-content: space-between;
 }

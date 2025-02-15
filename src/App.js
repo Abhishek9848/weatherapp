@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import MainWeatherWindow from './components/MainWeatherWindow';
 import { FadeLoader } from 'react-spinners';
+import useDate from './components/date';
 
-const getWeatherInfo = async (city , setLoading) => {
+const getWeatherInfo = async (city, setLoading) => {
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=6557810176c36fac5f0db536711a6c52`
   const { data } = await axios.get(url)
   if (data) {
@@ -35,11 +35,12 @@ function App() {
   const [city, setCity] = useState()
   const [weatherInfo, setWeatherInfo] = useState()
   const [loading, setLoading] = useState(false)
+  const { date, time, wish } = useDate();
 
   useEffect(() => {
     const call = async () => {
       setLoading(true)
-      const result = await getWeatherInfo(city , setLoading)
+      const result = await getWeatherInfo(city, setLoading)
       setWeatherInfo(result)
       setLoading(false)
     }
@@ -50,8 +51,12 @@ function App() {
   console.log("war --", weatherInfo)
   return (
     <div className="App">
-      {loading && <div className='loader'><FadeLoader color='blue'/></div>}
+      {loading && <div className='loader'><FadeLoader color='blue' /></div>}
       <div className='App-header'>
+        <div className='dateTime'>
+          <div>{wish}</div>
+          <div>{date} {time}</div>
+        </div>
         <MainWeatherWindow
           data={weatherInfo}
           setCity={setCity}

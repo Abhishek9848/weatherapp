@@ -1,7 +1,9 @@
 import React from 'react'
-import defaulticon from '../images/static/cloudy.svg'
-
+import useDate from './date';
+import geticon from '../weatherIcon';
 export default function WeatherBox({ date, icon, temp }) {
+    const { d, m } = useDate(date);
+    const imagePath = icon ? geticon(icon) : geticon()
     const getDay = date => {
         let weekday = new Array(7);
         weekday[0] = 'Sunday';
@@ -16,11 +18,10 @@ export default function WeatherBox({ date, icon, temp }) {
     };
     return (
         <div className='weather-box'>
-            <h1>{date ? getDay(date) : ''}</h1>
+            <h1>{date ? `${d} ${m}` : ''}</h1>
+            <p>{date ? getDay(date) : ''}</p>
             <img
-                src={
-                    defaulticon
-                }
+                src={imagePath}
                 alt='sun'
             />
             <span className='temp'>{Math.round(temp - 273.15)}°C</span>

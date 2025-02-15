@@ -5,11 +5,12 @@ export default function CityInput({ city, setCity }) {
     const handleChange = (e) => setCityInput(e.target.value)
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("first") 
+        console.log("first")
         setCity(cityInput)
     }
     const style = {
-        top: city ? '-340px' : '-20px'
+        top: city ? '-335px' : '-20px',
+        width: city ? '300px' : '600px'
     };
     return (
         <form onSubmit={handleSubmit}>
