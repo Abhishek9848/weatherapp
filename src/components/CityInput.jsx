@@ -5,7 +5,6 @@ export default function CityInput({ city, setCity }) {
     const handleChange = (e) => setCityInput(e.target.value)
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("first")
         setCity(cityInput)
     }
     const style = {
